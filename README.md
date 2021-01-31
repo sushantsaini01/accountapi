@@ -2,65 +2,16 @@
 Account API Assignment
 
 
+  * In this assignment there are two api’s which will return account balance and transactions on an account.
 
-	In this assignment there are two api’s which will return account balance and transactions on an account.
-                  1.	Account Balance – 
-                  -	API URL (if you are running in local) -- http://localhost:8080/accounts/balance/inquiry 
-                  a.	Sample Request
-                  {
-                  "accountNumber": "454545465"
-                  }
+      - To have better understanding on this account api, please refer the AccountAPI.yaml file.
 
-                  b.	Sample Response
-                  {
-                      "accountNumber": "454545465",
-                      "accountBalance": 25425.19
-                  }
+If you’d like to run this in your local then please do the following steps --
+  1. Download executable jar file from path - https://drive.google.com/drive/folders/1o25otuJ4rRu0-TWDybi2v74f8miZzeBZ?usp=sharing
+  2. Follow readme file placed at this shared google drive path in step 1.
+  3. Use the postman project “AccountService.postman_collection.json” and happy testing :)
 
-                  2.	Account Transactions –
-                  -	API URL (if you are running in local) --  http://localhost:8080/accounts/balance/history  
-                  a.	Sample Request
-                  {
-                  "accountNumber":"454545465",
-                  "transStartDate": "2021-01-10T01:30:00.000-05:00",
-                  "transEndDate": "2021-01-30T01:30:00.000-05:00"
-                  }
+Please comment with any feedback.
 
-                  b.	Sample Response
-
-                  {
-                      "status": {
-                          "status": "0",
-                          "message": "Transactions found and returned successfully"
-                      },
-                      "accountNumber": "454545465",
-                      "transCount": "4",
-                      "paginationTime": null,
-                      "accountTransactions": [
-                          {
-                              "transAmount": 445.0,
-                              "transTime": "2021-01-16T00:49:58.558+0000",
-                              "transType": "Deposit"
-                          },
-                          {
-                              "transAmount": 544.6,
-                              "transTime": "2021-01-21T00:49:58.558+0000",
-                              "transType": "Withdraw"
-                          },
-                          {
-                              "transAmount": 66.7,
-                              "transTime": "2021-01-26T00:49:58.558+0000",
-                              "transType": "Withdraw"
-                          },
-                          {
-                              "transAmount": 22.6,
-                              "transTime": "2021-01-28T00:49:58.558+0000",
-                              "transType": "Withdraw"
-                          }
-                      ]
-                  }
-
-
-To have better understanding on this account api, please refer the AccountAPI.yaml file.
-
-If you’d like to run this in your local then please use the postman project “AccountService.postman_collection.json”.
+Thank You,
+Sushant Saini
