@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "0b8c51ba-c758-4bdc-93b0-1be2b86aad5e",
+		"name": "AccountService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account Latest Balance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_key",
+						"value": "73267423849",
+						"type": "text"
+					},
+					{
+						"key": "transaction_id",
+						"value": "374823748284239",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"accountNumber\": \"454545465\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/accounts/balance/inquiry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts",
+						"balance",
+						"inquiry"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account History Balance - All Trans",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_key",
+						"type": "text",
+						"value": "73267423849"
+					},
+					{
+						"key": "transaction_id",
+						"type": "text",
+						"value": "374823748284239"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"accountNumber\":\"454545465\",\n\"transStartDate\": \"2021-01-10T01:30:00.000-05:00\",\n\"transEndDate\": \"2021-01-30T01:30:00.000-05:00\"\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/accounts/balance/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts",
+						"balance",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account History Balance - Limit Trans",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_key",
+						"type": "text",
+						"value": "73267423849"
+					},
+					{
+						"key": "transaction_id",
+						"type": "text",
+						"value": "374823748284239"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"accountNumber\":\"875645624\",\n\"transStartDate\": \"2021-01-10T01:30:00.000-05:00\",\n\"transEndDate\": \"2021-01-30T01:30:00.000-05:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/accounts/balance/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts",
+						"balance",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account History Balance- Deposits",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_key",
+						"type": "text",
+						"value": "73267423849"
+					},
+					{
+						"key": "transaction_id",
+						"type": "text",
+						"value": "374823748284239"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"accountNumber\":\"123456789\",\n\"transType\":\"Deposit\",\n\"transStartDate\": \"2021-01-10T01:30:00.000-05:00\",\n\"transEndDate\": \"2021-01-30T01:30:00.000-05:00\"\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/accounts/balance/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts",
+						"balance",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account History Balance- No Account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_key",
+						"type": "text",
+						"value": "73267423849"
+					},
+					{
+						"key": "transaction_id",
+						"type": "text",
+						"value": "374823748284239"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"accountNumber\":\"123456780\",\n\"transType\":\"Deposit\",\n\"transStartDate\": \"2021-01-21T01:30:00.000-05:00\",\n\"transEndDate\": \"2021-01-30T01:30:00.000-05:00\"\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/accounts/balance/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts",
+						"balance",
+						"history"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
